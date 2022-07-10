@@ -16,13 +16,20 @@
             <div class="caixa-nome-idade">
                 <label class="lb-nome">Nome: </label><input class="input-nome" type="text" placeholder="Nome">
                 <label class="lb-idade">Idade: </label><input class="input-idade" type="number"placeholder="Idade" >
+                <label class="lb-sexo">sexo: </label>
+                <select name="sexo" id="sexo">
+                    <option value="0"></option>
+                    <option value="1">1 - Masculino</option>
+                    <option value="2">2 - Feminino</option>
+                </select>
+                <label class="lb-cadeirante">Cadeirante: </label>
+                <select name="cadeirante" id="cadeirante">
+                    <option value="0"></option>
+                    <option value="1">1 - Sim</option>
+                    <option value="2">2 - Não</option>
+                </select>
             </div>
-           
-           <div class="caixa-checkbox">
-            <label class="lb-sexo-masculino"><input class="input-masculino" type="checkbox"> Masculino</label>
-            <label class="lb-sexo-feminino"><input class="input-feminino" type="checkbox"> Feminino</label>
-            <label class="lb-cadeirante"><input class="input-cadeirante" type="checkbox"> Cadeirante</label>
-            </div>
+            
         </div>
 
         <form class="caixa-formulario">
@@ -262,7 +269,7 @@
                     <option value="6">6 - Independência Modificada</option>
                     <option value="7">7 - Independência Completa</option>
                 </select>
-                
+            </div>   
         </form>
 
         <div class="caixa-resultados">
@@ -273,7 +280,7 @@
                 </div>
         </div>
         <div class="botao-enviar">
-            <button class="enviar" onclick="selecionando()">Enviar</button>
+            <button class="enviar" onclick="resultadoFinal()">Enviar</button>
         </div>
     </div>
     

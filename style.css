@@ -36,34 +36,25 @@
 
     .input-nome,
     .input-idade {
-        width: 80vw;
+        width: 83vw;
         margin: 2vw;
         height: 2em;
         border-radius: 5px;
+        border: none;
+        padding-left: 1.8vw;
     }
 
     .lb-nome,
-    .lb-idade {
+    .lb-idade,
+    .lb-sexo,
+    .lb-cadeirante{
         display: flex;
         justify-content: start;
         align-items: center;
         margin: 1vw;
     }
 
-    .caixa-checkbox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-
     }
-
-    .lb-sexo-feminino,
-    .lb-sexo-masculino,
-    .lb-cadeirante{
-    margin: 3vh 2vw;
-}
-
 .caixa-formulario label {
     display: block;
 }
@@ -81,13 +72,15 @@
 .caixa-form-autoCuidado,
 .caixa-form-mobilidade,
 .caixa-form-locomocao,
-.caixa-form-comunicacao,
+.caixa-form-comunicacao, 
 .caixa-form-conhecimento-social{
-    margin-left: 5px;
+    margin-left: 2vw;
     margin-bottom: 2vh;
 }
 
 .caixa-resultados{
+    width: 96vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,10 +88,15 @@
     background-color: rgba(70, 253, 253, 0.671);
     border-radius:20px 20px;
     box-shadow: 0px 0px 1px 1px white;
-    margin-left: 5px;
-    margin-bottom: 2vh;
+    display: none;
+    margin: 5vh 0 5vh -1.5vw;
+}
+
+.texto-resultado{
+    margin: 1vh 4vw;
     text-align: justify;
-    padding: 1vh 4vw;
+   
+    
 }
 
 
@@ -107,6 +105,7 @@ select {
     margin: 2vw;
     height: 2em;
     border-radius: 5px;
+    border: none;
 
 }
 .botao-enviar{
