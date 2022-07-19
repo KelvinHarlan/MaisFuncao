@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>+Função</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
+    
 </head>
+
 <body>
     <div class="container">
         <h1 class="titulo">+Função </h1>
@@ -15,290 +17,276 @@
         <div class="dadosPessoais">
             <div class="caixa-nome-idade">
                 <label class="lb-nome">Nome: </label><input class="input-nome" type="text" placeholder="Nome">
-                <label class="lb-idade">Idade: </label><input class="input-idade" type="number"placeholder="Idade" >
+                <label class="lb-idade">Idade: </label><input class="input-idade" type="number" min="1" max="120" placeholder="Idade">
                 <label class="lb-sexo">sexo: </label>
                 <select name="sexo" id="sexo">
                     <option value="0"></option>
-                    <option value="1">1 - Masculino</option>
-                    <option value="2">2 - Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
                 </select>
                 <label class="lb-cadeirante">Cadeirante: </label>
                 <select name="cadeirante" id="cadeirante">
                     <option value="0"></option>
-                    <option value="1">1 - Sim</option>
-                    <option value="2">2 - Não</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
                 </select>
             </div>
-            
+
         </div>
+        <div class="form-grupo">
+            <form class="caixa-formulario">
 
-        <form class="caixa-formulario">
-        
-            <div class="caixa-form-autoCuidado">
-                <h3 class="autocuidado">Autocuidado</h3>
-                <label>Alimentação</label>
-                <select name="alimentacao" id="alimentacao">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
+                <div class="caixa-form-autoCuidado">
+                    <h3 class="autocuidado">Autocuidado</h3>
+                    <label>Alimentação</label>
+                    <select name="alimentacao" id="alimentacao">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
 
-                </select>
-                <label>Higiene pessoal: apresentação e aparência</label>
-                <select name="higiene" id="higiene">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
+                    </select>
+                    <label>Higiene pessoal: apresentação e aparência</label>
+                    <select name="higiene" id="higiene">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
 
-                </select>
-                <label>Banho: Lavar o corpo</label>
-                <select name="banho" id="banho">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
+                    </select>
+                    <label>Banho: Lavar o corpo</label>
+                    <select name="banho" id="banho">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
 
-                </select>
-                
-                <label>Vestir: metade superior do corpo</label>
-                <select name="vestir-superior" id="vestir-superior">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
+                    </select>
 
-                </select>
+                    <label>Vestir: metade superior do corpo</label>
+                    <select name="vestir-superior" id="vestir-superior">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
 
-                <label>Vestir: metade inferior do corpo</label>
-                <select name="vestir-inferior" id="vestir-inferior">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
+                    </select>
 
-                </select>
+                    <label>Vestir: metade inferior do corpo</label>
+                    <select name="vestir-inferior" id="vestir-inferior">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
 
-                <label>Utilização do vaso sanitário</label>
-                <select name="vaso-sanitario" id="vaso-sanitario">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
+                    </select>
 
-                <label>Controle da urina: frequência de incontinência</label>
-                <select name="urina" id="urina">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
+                    <label>Utilização do vaso sanitário</label>
+                    <select name="vaso-sanitario" id="vaso-sanitario">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
 
-                <label>Controle das fezes</label>
-                <select name="fezes" id="fezes">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
-            </div>
-    
+                    <label>Controle da urina: frequência de incontinência</label>
+                    <select name="urina" id="urina">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
 
-            <div class="caixa-form-mobilidade">
-                <h3 class="mobilidade">Mobilidade</h3>
-                <label>Transferências: leito, cadeira, cadeira de rodas</label>
-                <select name="transferencia-cadeira" id="transferencia-cadeira">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
+                    <label>Controle das fezes</label>
+                    <select name="fezes" id="fezes">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
+                </div>
 
-                <label>Transferências: Vaso sanitário</label>
-                <select name="transferencia-vaso" id="transferencia-vaso">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
 
-                <label>Transferências: Banheira ou chuveiro</label>
-                <select name="transferencia-banheira" id="transferencia-banheira">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
-            </div>
+                <div class="caixa-form-mobilidade">
+                    <h3 class="mobilidade">Mobilidade</h3>
+                    <label>Transferências: leito, cadeira, cadeira de rodas</label>
+                    <select name="transferencia-cadeira" id="transferencia-cadeira">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
 
-            <div class="caixa-form-locomocao">
-                <h3 class="locomocao">Locomoção</h3>
-                <label>Marcha/ Cadeira de rodas</label>
-                <select name="marcha-cadeira" id="marcha-cadeira">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
+                    <label>Transferências: Vaso sanitário</label>
+                    <select name="transferencia-vaso" id="transferencia-vaso">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
 
-                <label>Escadas</label>
-                <select name="escadas" id="escadas">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
-            </div>
+                    <label>Transferências: Banheira ou chuveiro</label>
+                    <select name="transferencia-banheira" id="transferencia-banheira">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
+                </div>
 
-            <div class="caixa-form-comunicacao">
-                <h3 class="comunicacao">Comunicação</h3>
-                <label>Compreensão</label>
-                <select name="compreensao" id="compreensao">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
-            
+                <div class="caixa-form-locomocao">
+                    <h3 class="locomocao">Locomoção</h3>
+                    <label>Marcha/ Cadeira de rodas</label>
+                    <select name="marcha-cadeira" id="marcha-cadeira">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
 
-                <label>Expressão</label>
-                <select name="expressao" id="expressao">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
+                    <label>Escadas</label>
+                    <select name="escadas" id="escadas">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
+                </div>
 
-            </div>
+                <div class="caixa-form-comunicacao">
+                    <h3 class="comunicacao">Comunicação</h3>
+                    <label>Compreensão</label>
+                    <select name="compreensao" id="compreensao">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
 
-            <div class="caixa-form-conhecimento-social">
-                <h3 class="conhecimento-social">Conhecimento Social</h3>
-                <label>Interação social</label>
-                <select name="interacao-social" id="interacao-social">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
-            
-                <label>Resolução de problemas</label>
-                <select name="resolucao-de-problemas" id="resolucao-de-problemas">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
 
-                <label>Memória</label>
-                <select name="memoria" id="memoria">
-                    <option value="0"></option>
-                    <option value="1">1 - Assistência Total</option>
-                    <option value="2">2 - Assistência Máxima</option>
-                    <option value="3">3 - Assistência Moderada</option>
-                    <option value="4">4 - Assistência com Contato Mínimo</option>
-                    <option value="5">5 - Supervisão ou Preparação</option>
-                    <option value="6">6 - Independência Modificada</option>
-                    <option value="7">7 - Independência Completa</option>
-                </select>
-            </div>   
-        </form>
+                    <label>Expressão</label>
+                    <select name="expressao" id="expressao">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
 
-        <div class="caixa-resultados">
+                </div>
+
+                <div class="caixa-form-conhecimento-social">
+                    <h3 class="conhecimento-social">Conhecimento Social</h3>
+                    <label>Interação social</label>
+                    <select name="interacao-social" id="interacao-social">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
+
+                    <label>Resolução de problemas</label>
+                    <select name="resolucao-de-problemas" id="resolucao-de-problemas">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
+
+                    <label>Memória</label>
+                    <select name="memoria" id="memoria">
+                        <option value="0"></option>
+                        <option value="1">1 - Assistência Total</option>
+                        <option value="2">2 - Assistência Máxima</option>
+                        <option value="3">3 - Assistência Moderada</option>
+                        <option value="4">4 - Assistência com Contato Mínimo</option>
+                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="6">6 - Independência Modificada</option>
+                        <option value="7">7 - Independência Completa</option>
+                    </select>
+                </div>
+            </form>
+
+            <div class="caixa-resultados">
 
                 <div class="texto-resultado">
-                    caixa de resultados aqui!   
-            
+                    Aguardando resultado...
+
                 </div>
+            </div>
         </div>
+
         <div class="botao-enviar">
             <button class="enviar" onclick="resultadoFinal()">Enviar</button>
         </div>
-    </div>
-    
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     </div>
 
 
@@ -315,6 +303,24 @@
 
 
 
-    
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>
