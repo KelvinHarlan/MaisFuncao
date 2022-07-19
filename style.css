@@ -132,6 +132,9 @@ select {
     color: rgb(255, 0, 0);
 }
 
+i{
+    color: rgba(0, 0, 0, 0.700);
+}
 
 } /* fim do media mobile e tablet*/
 
@@ -283,5 +286,8 @@ body{
     color: rgb(255, 0, 0);
 }
 
+i{
+    color: rgba(0, 0, 0, 0.700);
+}
 
 }
