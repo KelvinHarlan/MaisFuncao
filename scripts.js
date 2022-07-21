@@ -53,7 +53,6 @@ function resultadoFinal() {
 
     function verificarEspacoEmBranco() { /*Verificando se existem campos em branco*/
         let seletores = document.querySelectorAll('select')
-        let temEmBranco = false
         for (i = 0; i < seletores.length; i++) {
             if (seletores[i].value === '0') {
                 seletores[i].style.backgroundColor = 'rgb(240, 108, 108)'
@@ -632,12 +631,64 @@ function downloadpdf(){ /* Salvando o texto em PDF*/
 
 function copiar(){ /* copiando texto*/
     let texto = document.querySelector('.resultadoFinal');
+    let palavraCopiar = document.querySelector('.copiar');
     try{
     navigator.clipboard.writeText(texto.innerText);
+    palavraCopiar.innerHTML = '<i class="fa-solid fa-copy"></i> Copiado';
+    palavraCopiar.style.backgroundColor = 'rgb(162, 245, 37)';
+
 }
     catch{
-        alert('Caixa de texto está vazia, clique em enviar.')
+        alert('Caixa de texto está vazia, clique em enviar.');
+    }
+    
+
+
+}
+
+
+function limpar(){
+    let texto = document.querySelector('.texto-resultado');
+    let palavraCopiar = document.querySelector('.copiar');
+    let seletores = document.querySelectorAll('select');
+    let nome = document.querySelector('.input-nome');
+    let idade = document.querySelector('.input-idade');
+
+    for (i = 0; i < seletores.length; i++) { // limpando os seletores
+        if (seletores[i].value !== '0') {
+            seletores[i].value = '0';
+
+
+        }
+        else {
+            seletores[i].style.backgroundColor = 'rgb(255, 255, 255)'; // voltando a cor dos seletores pra branco
+        }
     }
 
 
+    texto.innerHTML = 'Aguardando resultado...' // quando limpar, redefinir o texto 
+   
+    if (window.innerWidth > 768) { /*Verificando tamanho da tela para aplicar o scroll*/
+        palavraCopiar.style.backgroundColor = 'transparent'; // voltar a cor do botão copiar Desktop
+    }
+    else{
+        palavraCopiar.style.backgroundColor = 'rgb(255,255,255';
+    }
+    palavraCopiar.innerHTML = '<i class="fa-solid fa-copy"></i> copiar'; // caso o copiar tenha sido selecionado, volta ao normal
+    
+
+
+    if (nome.value && idade.value !== '0'){ // Limpando o nome e a idade
+        nome.value = '';
+        idade.value = '';
+    }
+
+    else{
+        nome.style.backgroundColor = 'rgb(255, 255, 255)';
+    }
+
+
+
+
+    window.scrollTo(x = 0, y = 0); /*Voltando a tela para o início da página*/
 }

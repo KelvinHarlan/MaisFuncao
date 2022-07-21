@@ -130,21 +130,22 @@ select {
     box-shadow: 0px 0px 1px 1px white;
 }
 
-.imprimir{
+.btn-config{
     display: inline-block;
     margin: 1.5vh 4vw;
     padding: 1vh 20vw;
     border-radius: 5px;
     border: none;
     background-color: rgb(255, 255, 255);
+
 }
 
-.imprimir:hover{
+.btn-config:hover{
     box-shadow: 0px 0px 1px 1px white;
     background-color: rgb(255, 255, 255);
 }
 
-.imprimir:active{
+.btn-config:active{
     background-color: rgb(162, 245, 37);
 }
 
@@ -302,7 +303,8 @@ body{
     background-color: rgb(162, 245, 37);
 }
 
-.imprimir{
+
+.btn-config{
     font-size: 1rem;
     display: inline-block;
     width: 10vw;
@@ -313,14 +315,15 @@ body{
     border: none;
     border-radius: 5px;
     background-color: transparent;
+
 }
 
-.imprimir:hover{
+.btn-config:hover{
     box-shadow: 0px 0px 1px 1px white;
     background-color: rgb(255, 255, 255);
 }
 
-.imprimir:active{
+.btn-config:active{
     background-color: rgb(162, 245, 37);
 }
 
