@@ -611,24 +611,6 @@ function resultadoFinal() {
     }
 
 }
-/*
-function downloadpdf(){
-    const element = document.querySelector('.resultadoFinal').innerHTML;
-    var opt = {
-    margin:       1,
-    filename:     'Paciente',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-
-    // New Promise-based usage:
-    html2pdf().set(opt).from(element).save();
-    console.log(element);
-
-
-}
-   */
 
 function downloadpdf(){
     nome = document.querySelector('.input-nome')
