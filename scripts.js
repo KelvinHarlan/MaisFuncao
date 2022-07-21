@@ -614,10 +614,16 @@ function resultadoFinal() {
 
 function downloadpdf(){
     nome = document.querySelector('.input-nome')
-    var texto = document.querySelector('.resultadoFinal');
+    var texto = document.querySelector('.texto-resultado');
    var janela = window.open('','','width = 800, heigth = 600');
     janela.document.write(texto.innerHTML);
     janela.document.close();
-    janela.document.title = nome.value;
+    if (nome.value !==''){
+        janela.document.title = nome.value;
+    }
+    else{
+        janela.document.title = 'Paciente sem nome informado';
+    }
+    
     janela.print();
 }
