@@ -612,10 +612,10 @@ function resultadoFinal() {
 
 }
 
-function downloadpdf(){
+function downloadpdf(){ /* Salvando o texto em PDF*/
     nome = document.querySelector('.input-nome')
-    var texto = document.querySelector('.texto-resultado');
-   var janela = window.open('','','width = 800, heigth = 600');
+    let texto = document.querySelector('.texto-resultado');
+    let janela = window.open('','','width = 800, heigth = 600');
     janela.document.write(texto.innerHTML);
     janela.document.close();
     if (nome.value !==''){
@@ -626,4 +626,18 @@ function downloadpdf(){
     }
     
     janela.print();
+
+}
+
+
+function copiar(){ /* copiando texto*/
+    let texto = document.querySelector('.resultadoFinal');
+    try{
+    navigator.clipboard.writeText(texto.innerText);
+}
+    catch{
+        alert('Caixa de texto está vazia, clique em enviar.')
+    }
+
+
 }
