@@ -8,7 +8,10 @@
     <title>+Função</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
@@ -18,7 +21,8 @@
         <div class="dadosPessoais">
             <div class="caixa-nome-idade">
                 <label class="lb-nome">Nome: </label><input class="input-nome" type="text" placeholder="Nome">
-                <label class="lb-idade">Idade: </label><input class="input-idade" type="number" min="1" max="120" placeholder="Idade">
+                <label class="lb-idade">Idade: </label><input class="input-idade" type="number" min="1" max="120"
+                    placeholder="Idade">
                 <label class="lb-sexo">sexo: </label>
                 <select name="sexo" id="sexo">
                     <option value="0"></option>
@@ -286,6 +290,7 @@
 
         <div class="botao-enviar">
             <button class="enviar" onclick="resultadoFinal()">Enviar</button>
+            <button class="imprimir" onclick="downloadpdf()">imprimir</button>
         </div>
 
     </div>

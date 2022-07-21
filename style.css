@@ -273,12 +273,34 @@ body{
     background-color: transparent;
 }
 
+
 .enviar:hover{
     box-shadow: 0px 0px 1px 1px white;
     background-color: rgb(255, 255, 255);
-    font-size: 1.3rem;
 }
 .enviar:active{
+    background-color: rgb(162, 245, 37);
+}
+
+.imprimir{
+    font-size: 1rem;
+    display: inline-block;
+    width: 10vw;
+    height: 5vh;
+    margin-top: 3vh;
+    margin-left: 1vw;
+    box-shadow: 0px 0px 2px 2px white;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.imprimir:hover{
+    box-shadow: 0px 0px 1px 1px white;
+    background-color: rgb(255, 255, 255);
+}
+
+.imprimir:active{
     background-color: rgb(162, 245, 37);
 }
 
@@ -289,5 +311,12 @@ body{
 i{
     color: rgba(0, 0, 0, 0.700);
 }
+
+.resultadoFinal{
+    text-align: justify;
+}
+
+
+
 
 }

@@ -582,7 +582,7 @@ function resultadoFinal() {
 
     function imprimindoResultado() {
         resultado.innerHTML =
-            `<p>
+            `<p class = "resultadoFinal">
         <b>Nome: </b> ${nome.value}<br>
         <b>Idade: </b>${idade} anos<br>
         <b>Sexo: </b>${sexo.value}<br>
@@ -603,9 +603,39 @@ function resultadoFinal() {
         
         </p>`
     }
+
+
+
     if (window.innerWidth > 768) { /*Verificando tamanho da tela para aplicar o scroll*/
-        window.scrollTo(x = 0, y = 0)
+        window.scrollTo(x = 0, y = 0);
     }
 
 }
+/*
+function downloadpdf(){
+    const element = document.querySelector('.resultadoFinal').innerHTML;
+    var opt = {
+    margin:       1,
+    filename:     'Paciente',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
 
+    // New Promise-based usage:
+    html2pdf().set(opt).from(element).save();
+    console.log(element);
+
+
+}
+   */
+
+function downloadpdf(){
+    nome = document.querySelector('.input-nome')
+    var texto = document.querySelector('.resultadoFinal');
+   var janela = window.open('','','width = 800, heigth = 600');
+    janela.document.write(texto.innerHTML);
+    janela.document.close();
+    janela.document.title = nome.value;
+    janela.print();
+}
