@@ -1,7 +1,8 @@
 @media (max-width: 768px) {
     html {
         scroll-behavior: smooth;
-}
+    }
+
     .titulo {
         display: flex;
         justify-content: center;
@@ -41,16 +42,17 @@
     .input-idade {
         width: 83vw;
         margin: 2vw;
-        height: 2em;
+        height: 3rem;
         border-radius: 5px;
         border: none;
         padding-left: 1.8vw;
+        font-size: 1rem;
     }
 
     .lb-nome,
     .lb-idade,
     .lb-sexo,
-    .lb-cadeirante{
+    .lb-cadeirante {
         display: flex;
         justify-content: start;
         align-items: center;
@@ -58,285 +60,301 @@
     }
 
 
-.caixa-formulario label {
-    display: block;
+    .caixa-formulario label {
+        display: block;
+        margin: 0.1vh;
+        margin-top: 2vh;
+        
+    }
+
+    .caixa-formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(70, 253, 253, 0.671);
+        border-radius: 5px 5px 20px 20px;
+        box-shadow: 0px 0px 1px 1px white;
+    }
+
+    .caixa-form-autoCuidado,
+    .caixa-form-mobilidade,
+    .caixa-form-locomocao,
+    .caixa-form-comunicacao,
+    .caixa-form-conhecimento-social {
+        margin-left: 2vw;
+        margin-bottom: 2vh;
+    }
+
+    .caixa-resultados {
+        width: 96vw;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(70, 253, 253, 0.671);
+        border-radius: 20px 20px;
+        box-shadow: 0px 0px 1px 1px white;
+        display: none;
+        margin: 5vh 0 5vh -1.5vw;
+    }
+
+    .texto-resultado {
+        margin: 1vh 4vw;
+        text-align: justify;
+
+
+    }
+
+
+    select {
+        width: 85vw;
+        margin: 2vw;
+        height: 3rem;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+
+    }
+
+    .botao-enviar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .enviar {
+        display: inline-block;
+        margin: 1.5vh 4vw;
+        padding: 1vh 20vw;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .enviar:hover {
+        box-shadow: 0px 0px 1px 1px white;
+    }
+
+    .btn-config {
+        display: none;
+        margin: 1.5vh 4vw;
+        padding: 1vh 20vw;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .btn-config:hover {
+        box-shadow: 0px 0px 1px 1px white;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .btn-config:active {
+        background-color: rgb(162, 245, 37);
+    }
+
+    .red {
+        color: rgb(255, 0, 0);
+    }
+
+    i {
+        color: rgba(0, 0, 0, 0.700);
+    }
+
 }
 
-.caixa-formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(70, 253, 253, 0.671);
-    border-radius: 5px 5px 20px 20px;
-    box-shadow: 0px 0px 1px 1px white;
-}
-
-.caixa-form-autoCuidado,
-.caixa-form-mobilidade,
-.caixa-form-locomocao,
-.caixa-form-comunicacao, 
-.caixa-form-conhecimento-social{
-    margin-left: 2vw;
-    margin-bottom: 2vh;
-}
-
-.caixa-resultados{
-    width: 96vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(70, 253, 253, 0.671);
-    border-radius:20px 20px;
-    box-shadow: 0px 0px 1px 1px white;
-    display: none;
-    margin: 5vh 0 5vh -1.5vw;
-}
-
-.texto-resultado{
-    margin: 1vh 4vw;
-    text-align: justify;
-   
-    
-}
-
-
-select {
-    width: 85vw;
-    margin: 2vw;
-    height: 2em;
-    border-radius: 5px;
-    border: none;
-
-}
-.botao-enviar{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-.enviar{
-    display: inline-block;
-    margin: 1.5vh 4vw;
-    padding: 1vh 20vw;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(255, 255, 255);
-}
-.enviar:hover{
-    box-shadow: 0px 0px 1px 1px white;
-}
-
-.btn-config{
-    display: inline-block;
-    margin: 1.5vh 4vw;
-    padding: 1vh 20vw;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(255, 255, 255);
-
-}
-
-.btn-config:hover{
-    box-shadow: 0px 0px 1px 1px white;
-    background-color: rgb(255, 255, 255);
-}
-
-.btn-config:active{
-    background-color: rgb(162, 245, 37);
-}
-
-.red{
-    color: rgb(255, 0, 0);
-}
-
-i{
-    color: rgba(0, 0, 0, 0.700);
-}
-
-} /* fim do media mobile e tablet*/
+/* fim do media mobile e tablet*/
 
 
 
 
 
-@media (min-width: 769px){  /*inicio do media laptop*/
-html {
+@media (min-width: 769px) {
+
+    /*inicio do media laptop*/
+    html {
         scroll-behavior: smooth;
-}
-body{
-    font-family: arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgb(0, 255, 255), rgb(212, 49, 245), rgb(0, 255, 255));
+    }
 
-}
-.container option{
-    font-size: 1rem;
-}
-.titulo{
-    margin: 0 0 3vh;
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 96vw;
-    padding: 2vw;
-}
+    body {
+        font-family: arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(rgb(0, 255, 255), rgb(212, 49, 245), rgb(0, 255, 255));
 
-.dadosPessoais{
-    width: 97%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 1px 1px white;
-    padding: 1%;
-    font-weight: 550;
-    
-}
+    }
 
-.input-nome{
-   width: 30%;
-   border-radius:3px;
-   box-shadow: 0px 0px 1px 1px white;
-   border: none;
-   padding-left: 5px;
-   height: 3.5vh;
-   font-size: 1rem;
-}
+    .container option {
+        font-size: 1rem;
+    }
 
-.input-idade{
-    width: 6%;
-    border-radius:3px;
-    box-shadow: 0px 0px 1px 1px white;
-    border: none;
-    padding-left: 5px;
-    height: 3.5vh;
-}
+    .titulo {
+        margin: 0 0 3vh;
+    }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 96vw;
+        padding: 2vw;
+    }
 
-.caixa-formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 35%;
-    background-color: rgba(70, 253, 253, 0.671);
-}
+    .dadosPessoais {
+        width: 97%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 1px 1px white;
+        padding: 1%;
+        font-weight: 550;
 
-.dadosPessoais select{
-    height: 3.5vh;
-    border-radius:3px;
-    box-shadow: 0px 0px 1px 1px white;
-    border: none;
-    padding-left: 5px;
-}
+    }
 
-.caixa-formulario select{
-     display: block;
-     width: 96%;
-    height: 5vh;
-    border-radius:3px;
-    box-shadow: 0px 0px 1px 1px white;
-    border: none;
-    padding-left: 5px;
-}
-.caixa-formulario label{
-    display: inline-block;
-    margin:5px;
-}
+    .input-nome {
+        width: 30%;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px 1px white;
+        border: none;
+        padding-left: 5px;
+        height: 3.5vh;
+        font-size: 1rem;
+    }
 
-.caixa-form-autoCuidado,
-.caixa-form-mobilidade,
-.caixa-form-locomocao,
-.caixa-form-comunicacao, 
-.caixa-form-conhecimento-social{
-    margin-left: 1vw;
-    margin-bottom: 2vh;
-}
-
-.caixa-resultados{
-    text-align: justify;
-    padding: 10px;
-    margin-left: 1vw;
-    width: 65%;
-    border-radius:2px 2px;
-    box-shadow: 0px 0px 1px 1px white;
-    background-color: rgba(70, 253, 253, 0.671);
-   
-}
-
-.form-grupo{
-    margin-top: 2vh;
-    box-shadow: 0px 0px 1px 1px white;
-    display: flex;
-    width:99%;
-}
-
-.botao-enviar{
-    width: 99%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-.enviar{
-    font-size: 1rem;
-    display: inline-block;
-    width: 40vw;
-    height: 5vh;
-    margin-top: 3vh;
-    box-shadow: 0px 0px 2px 2px white;
-    border: none;
-    border-radius: 5px;
-    background-color: transparent;
-}
+    .input-idade {
+        width: 6%;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px 1px white;
+        border: none;
+        padding-left: 5px;
+        height: 3.5vh;
+    }
 
 
-.enviar:hover{
-    box-shadow: 0px 0px 1px 1px white;
-    background-color: rgb(255, 255, 255);
-}
-.enviar:active{
-    background-color: rgb(162, 245, 37);
-}
+    .caixa-formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 35%;
+        background-color: rgba(70, 253, 253, 0.671);
+    }
+
+    .dadosPessoais select {
+        height: 3.5vh;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px 1px white;
+        border: none;
+        padding-left: 5px;
+    }
+
+    .caixa-formulario select {
+        display: block;
+        width: 96%;
+        height: 5vh;
+        border-radius: 3px;
+        box-shadow: 0px 0px 1px 1px white;
+        border: none;
+        padding-left: 5px;
+    }
+
+    .caixa-formulario label {
+        display: inline-block;
+        margin: 1vh;
+        margin-top:3vh;
+    }
+
+    .caixa-form-autoCuidado,
+    .caixa-form-mobilidade,
+    .caixa-form-locomocao,
+    .caixa-form-comunicacao,
+    .caixa-form-conhecimento-social {
+        margin-left: 1vw;
+        margin-bottom: 2vh;
+    }
+
+    .caixa-resultados {
+        text-align: justify;
+        padding: 10px;
+        margin-left: 1vw;
+        width: 65%;
+        border-radius: 2px 2px;
+        box-shadow: 0px 0px 1px 1px white;
+        background-color: rgba(70, 253, 253, 0.671);
+
+    }
+
+    .form-grupo {
+        margin-top: 2vh;
+        box-shadow: 0px 0px 1px 1px white;
+        display: flex;
+        width: 99%;
+    }
+
+    .botao-enviar {
+        width: 99%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .enviar {
+        font-size: 1rem;
+        display: inline-block;
+        width: 40vw;
+        height: 5vh;
+        margin-top: 3vh;
+        box-shadow: 0px 0px 2px 2px white;
+        border: none;
+        border-radius: 5px;
+        background-color: transparent;
+    }
 
 
-.btn-config{
-    font-size: 1rem;
-    display: inline-block;
-    width: 10vw;
-    height: 5vh;
-    margin-top: 3vh;
-    margin-left: 1vw;
-    box-shadow: 0px 0px 2px 2px white;
-    border: none;
-    border-radius: 5px;
-    background-color: transparent;
+    .enviar:hover {
+        box-shadow: 0px 0px 1px 1px white;
+        background-color: rgb(255, 255, 255);
+    }
 
-}
+    .enviar:active {
+        background-color: rgb(162, 245, 37);
+    }
 
-.btn-config:hover{
-    box-shadow: 0px 0px 1px 1px white;
-    background-color: rgb(255, 255, 255);
-}
 
-.btn-config:active{
-    background-color: rgb(162, 245, 37);
-}
+    .btn-config {
+        font-size: 1rem;
+        display: none;
+        width: 10vw;
+        height: 5vh;
+        margin-top: 3vh;
+        margin-left: 1vw;
+        box-shadow: 0px 0px 2px 2px white;
+        border: none;
+        border-radius: 5px;
+        background-color: transparent;
 
-.red{
-    color: rgb(255, 0, 0);
-}
+    }
 
-i{
-    color: rgba(0, 0, 0, 0.700);
-}
+    .btn-config:hover {
+        box-shadow: 0px 0px 1px 1px white;
+        background-color: rgb(255, 255, 255);
+    }
 
-.resultadoFinal{
-    text-align: justify;
-}
+    .btn-config:active {
+        background-color: rgb(162, 245, 37);
+    }
+
+    .red {
+        color: rgb(255, 0, 0);
+    }
+
+    i {
+        color: rgba(0, 0, 0, 0.700);
+    }
+
+    .resultadoFinal {
+        text-align: justify;
+    }
 
 }

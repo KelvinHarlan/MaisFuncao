@@ -10,6 +10,7 @@ function resultadoFinal() {
     let idade = document.querySelector('.input-idade').value
     let sexo = document.querySelector('#sexo')
     let cadeirante = document.querySelector('#cadeirante').value
+    let ativarBotões = document.querySelectorAll('.btn-config')
     /*Autocuidado*/
     let alimentacao = document.querySelector('#alimentacao')
     let higiene = document.querySelector('#higiene')
@@ -56,6 +57,7 @@ function resultadoFinal() {
         for (i = 0; i < seletores.length; i++) {
             if (seletores[i].value === '0') {
                 seletores[i].style.backgroundColor = 'rgb(240, 108, 108)'
+        
 
             }
             else {
@@ -66,6 +68,7 @@ function resultadoFinal() {
 
 
             }
+            
         }
         if (nome.value === '') {
             nome.style.backgroundColor = 'rgb(255,255,255)'
@@ -521,7 +524,7 @@ function resultadoFinal() {
         else if (transferenciaBanheira.value === '7' && cadeirante === '0') {
             transferenciaBanheira = 'Dado ( <b class = "red">Cadeirante:</b> ) está em branco!'
         }
-        
+
 
         else if (transferenciaBanheira.value === '0') {
             transferenciaBanheira = 'Dado ( <b class = "red">Transferências: Banheira ou chuveiro:</b> ) está em branco!'
@@ -529,45 +532,45 @@ function resultadoFinal() {
         }
 
         if (marchaCadeira.value === '1') { /*Marcha/ Cadeira de rodas*/
-        marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Assistência Total - A pessoa executa menos de 25% do esforço ou requer assistência de duas pessoas ou não anda o mínimo de 17 metros.'
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Assistência Total - A pessoa executa menos de 25% do esforço ou requer assistência de duas pessoas ou não anda o mínimo de 17 metros.'
 
         }
 
         else if (marchaCadeira.value === '2') {
-        marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Assistência Máxima - A pessoa executa 25 a 49% do esforço de locomoção para andar um mínimo de 15 metros. Requer a assisência de uma pessoa.'
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Assistência Máxima - A pessoa executa 25 a 49% do esforço de locomoção para andar um mínimo de 15 metros. Requer a assisência de uma pessoa.'
 
         }
 
-         else if (marchaCadeira.value === '3') {
-        marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Assistência Moderada - A pessoa executa 50 a 74% do esforço de locomoção para andar um mínimo de 50 metros.'
+        else if (marchaCadeira.value === '3') {
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Assistência Moderada - A pessoa executa 50 a 74% do esforço de locomoção para andar um mínimo de 50 metros.'
 
         }
 
         else if (marchaCadeira.value === '4') {
             marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Assistência com contato mínimo - É preciso apenas tocar na pessoa para realização das tarefas. A pessoa executa 75% ou mais de esforço de locomoção para andar um mínimo de 50 metros.'
-    
+
         }
 
         else if (marchaCadeira.value === '5') {
             marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
-    
+
         }
 
         else if (marchaCadeira.value === '6') {
             marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
-    
+
         }
 
         else if (marchaCadeira.value === '7') {
             marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
-    
+
         }
 
         else if (marchaCadeira.value === '0') {
             marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
-    
+
         }
-        
+
 
 
 
@@ -608,51 +611,55 @@ function resultadoFinal() {
     if (window.innerWidth > 768) { /*Verificando tamanho da tela para aplicar o scroll*/
         window.scrollTo(x = 0, y = 0);
     }
-
+    for (i = 0; i < ativarBotões.length; i++) {
+        ativarBotões[i].style.display = 'inline-block'// Ativando os botões de imprimir, salvar, copiar apenas quando clicado clicado em enviar
+    }
 }
 
-function downloadpdf(){ /* Salvando o texto em PDF*/
+function downloadpdf() { /* Salvando o texto em PDF*/
     nome = document.querySelector('.input-nome')
     let texto = document.querySelector('.texto-resultado');
-    let janela = window.open('','','width = 800, heigth = 600');
+    let janela = window.open('', '', 'width = 800, heigth = 600');
     janela.document.write(texto.innerHTML);
     janela.document.close();
-    if (nome.value !==''){
+    if (nome.value !== '') {
         janela.document.title = nome.value;
     }
-    else{
+    else {
         janela.document.title = 'Paciente sem nome informado';
     }
-    
+
     janela.print();
 
 }
 
 
-function copiar(){ /* copiando texto*/
+function copiar() { /* copiando texto*/
     let texto = document.querySelector('.resultadoFinal');
     let palavraCopiar = document.querySelector('.copiar');
-    try{
-    navigator.clipboard.writeText(texto.innerText);
-    palavraCopiar.innerHTML = '<i class="fa-solid fa-copy"></i> Copiado';
-    palavraCopiar.style.backgroundColor = 'rgb(162, 245, 37)';
+    try {
+        navigator.clipboard.writeText(texto.innerText);
+        palavraCopiar.innerHTML = '<i class="fa-solid fa-copy"></i> Copiado';
+        palavraCopiar.style.backgroundColor = 'rgb(162, 245, 37)';
 
-}
-    catch{
+    }
+    catch {
         alert('Caixa de texto está vazia, clique em enviar.');
     }
-    
+
 
 
 }
 
 
-function limpar(){
+function limpar() {
     let texto = document.querySelector('.texto-resultado');
+    let caixaTexto = document.querySelector('.caixa-resultados');
     let palavraCopiar = document.querySelector('.copiar');
     let seletores = document.querySelectorAll('select');
     let nome = document.querySelector('.input-nome');
     let idade = document.querySelector('.input-idade');
+    let ativarBotões = document.querySelectorAll('.btn-config')
 
     for (i = 0; i < seletores.length; i++) { // limpando os seletores
         if (seletores[i].value !== '0') {
@@ -667,27 +674,30 @@ function limpar(){
 
 
     texto.innerHTML = 'Aguardando resultado...' // quando limpar, redefinir o texto 
-   
+
     if (window.innerWidth > 768) { /*Verificando tamanho da tela para aplicar o scroll*/
         palavraCopiar.style.backgroundColor = 'transparent'; // voltar a cor do botão copiar Desktop
     }
-    else{
+    else {
         palavraCopiar.style.backgroundColor = 'rgb(255,255,255';
+        caixaTexto.style.display = 'none' // ocultando a barra de resultados no mobile
     }
     palavraCopiar.innerHTML = '<i class="fa-solid fa-copy"></i> copiar'; // caso o copiar tenha sido selecionado, volta ao normal
-    
 
 
-    if (nome.value && idade.value !== '0'){ // Limpando o nome e a idade
+
+    if (nome.value && idade.value !== '0') { // Limpando o nome e a idade
         nome.value = '';
         idade.value = '';
     }
 
-    else{
+    else {
         nome.style.backgroundColor = 'rgb(255, 255, 255)';
     }
 
-
+    for (i = 0; i < ativarBotões.length; i++) {
+        ativarBotões[i].style.display = 'none'// Desativando os botões de imprimir, salvar, copiar apenas quando clicado clicado em enviar
+    }
 
 
     window.scrollTo(x = 0, y = 0); /*Voltando a tela para o início da página*/
