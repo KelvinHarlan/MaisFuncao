@@ -631,8 +631,6 @@ function downloadpdf() { /* Salvando o texto em PDF*/
     }
 
     janela.print();
-    
-    janela.window.close()
 }
 
 
