@@ -126,8 +126,8 @@
 
     .enviar {
         display: inline-block;
-        margin: 1.5vh 4vw;
-        padding: 1vh 20vw;
+        margin: 2vh 4vw;
+        padding: 1.5rem 20vw;
         border-radius: 5px;
         border: none;
         background-color: rgb(255, 255, 255);
@@ -140,7 +140,7 @@
     .btn-config {
         display: none;
         margin: 1.5vh 4vw;
-        padding: 1vh 20vw;
+        padding: 0.6rem 20vw;
         border-radius: 5px;
         border: none;
         background-color: rgb(255, 255, 255);

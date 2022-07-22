@@ -621,7 +621,8 @@ function downloadpdf() { /* Salvando o texto em PDF*/
     let texto = document.querySelector('.texto-resultado');
     let janela = window.open('', '', 'width = 800, heigth = 600');
     janela.document.write(texto.innerHTML);
-    janela.document.close();
+    
+    
     if (nome.value !== '') {
         janela.document.title = nome.value;
     }
@@ -630,7 +631,7 @@ function downloadpdf() { /* Salvando o texto em PDF*/
     }
 
     janela.print();
-
+    janela.window.close()
 }
 
 
