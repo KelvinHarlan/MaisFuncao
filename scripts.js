@@ -51,13 +51,12 @@ function resultadoFinal() {
     caixaResultado.style.display = 'flex'
 
 
-
     function verificarEspacoEmBranco() { /*Verificando se existem campos em branco*/
         let seletores = document.querySelectorAll('select')
         for (i = 0; i < seletores.length; i++) {
             if (seletores[i].value === '0') {
                 seletores[i].style.backgroundColor = 'rgb(240, 108, 108)'
-        
+
 
             }
             else {
@@ -68,7 +67,7 @@ function resultadoFinal() {
 
 
             }
-            
+
         }
         if (nome.value === '') {
             nome.style.backgroundColor = 'rgb(255,255,255)'
@@ -424,7 +423,8 @@ function resultadoFinal() {
         }
 
         else if (transferenciaLeito.value === '7' && cadeirante === '0') {
-            transferenciaLeito = 'Dado ( <b class = "red">Cadeirante:</b> ) está em branco!'
+            alert('Algum dado importante está em branco!')
+            transferenciaLeito = 'Dado ( <b class = "red">Transferências: leito, cadeira, cadeira de rodas:</b> ) está em branco!'
 
         }
 
@@ -473,7 +473,8 @@ function resultadoFinal() {
         }
 
         else if (transferenciaVaso.value === '7' && cadeirante === '0') {
-            transferenciaVaso = 'Dado ( <b class = "red">Cadeirante:</b> ) está em branco!'
+            alert('Algum dado importante está em branco!')
+            transferenciaVaso = 'Dado ( <b class = "red">Transferências: Vaso sanitário:</b> ) está em branco!'
         }
 
         else if (transferenciaVaso.value === '0') {
@@ -522,7 +523,8 @@ function resultadoFinal() {
         }
 
         else if (transferenciaBanheira.value === '7' && cadeirante === '0') {
-            transferenciaBanheira = 'Dado ( <b class = "red">Cadeirante:</b> ) está em branco!'
+            alert('Algum dado importante está em branco!')
+            transferenciaBanheira = 'Dado ( <b class = "red">Transferências: Banheira ou chuveiro:</b> ) está em branco!'
         }
 
 
@@ -551,28 +553,287 @@ function resultadoFinal() {
 
         }
 
+        else if (marchaCadeira.value === '5.0' && cadeirante == 'Não') {
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Supervisão: Requer alguém do lado, com ou sem encorajamento ou sugestão, para andar um mínimo de 50 metros.'
+        }
+
+        else if (marchaCadeira.value === '5.0' && cadeirante == 'Sim') {
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Supervisão: Requer alguém ao lado, com ou sem encorajamento ou sugestão para conduzir a cadeira de rodas por pelo menos 50 metros.'
+        }
+
+        else if (marchaCadeira.value === '5.0' && cadeirante == '0') {
+            alert('Algum dado importante está em branco!')
+            marchaCadeira = 'Dado ( <b class = "red">Marcha/ Cadeira de rodas:</b> ) está em branco!'
+        }
+
+        else if (marchaCadeira.value === '5' && cadeirante == '0') {
+            alert('Algum dado importante está em branco!')
+            marchaCadeira = 'Dado ( <b class = "red">Marcha/ Cadeira de rodas:</b> ) está em branco!'
+        }
+
         else if (marchaCadeira.value === '5') {
-            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Deambulação Doméstica: Anda apenas pequenas distâncias com ou sem dispositivos. Pode levar um tempo acima do razoável ou há riscos de segurança. '
 
         }
 
         else if (marchaCadeira.value === '6') {
-            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Independência Modificada: Se a pessoa anda...Anda pelo menos 50 metros, mas usa órtese ou prótese em membro inferior, sapatos especiais, bengala, muletas ou andadores. Leva um tempo acima do razoável ou há riscos de segurança.'
 
         }
 
         else if (marchaCadeira.value === '7') {
-            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
+            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b> Independência Completa: Anda pelo menos 50 metros sem dispositivos auxiliares. Não usa cadeira de rodas. Executa com segurança.'
 
         }
 
         else if (marchaCadeira.value === '0') {
-            marchaCadeira = '<b>Marcha/ Cadeira de rodas:</b>'
+            marchaCadeira = 'Dado ( <b class = "red">Marcha/ Cadeira de rodas:</b> ) está em branco!'
+
+        }
+
+        if (escadas.value === '1') { /*Escadas*/
+            escadas = '<b>Escadas:</b> Assistência Total: A pessoa executa de menos de 25% do esforço, ou requer assistência de duas pessoas ou não sobre e desce 4 a 6 degraus e é carregada.'
+
+        }
+
+        if (escadas.value === '2') {
+            escadas = '<b>Escadas:</b> Assistência Máxima: A pessoa executa 25 a 49% do esforço para subir e descer 4 a 6 degraus. Requer assistência de uma pessoa só.'
+
+        }
+
+        if (escadas.value === '3') {
+            escadas = '<b>Escadas:</b> Assistência Moderada: A pessoa executa 50 a 74% do esforço para subir e descer um lance de escadas. '
+
+        }
+
+        if (escadas.value === '4') {
+            escadas = '<b>Escadas:</b> Assistência com Contato Mínimo: É preciso apenas tocar a pessoa para a realização da atividade. A pessoa executa 75% ou mais do esforço para subir e descer um lance de escadas.'
+
+        }
+
+        if (escadas.value === '5.0') {
+            escadas = '<b>Escadas:</b> Supervisão: Requer alguém do lado, com ou sem encorajamento ou sugestão, para subir e descer um lance de escadas.'
+
+        }
+
+        if (escadas.value === '5') {
+            escadas = '<b>Escadas:</b> Deambulação Doméstica: Sobe e desce 4 a 6 degraus independentemente, com ou sem dispositivo auxiliar. Pode levar um tempo acima do razoável ou há riscos de segurança.'
+
+        }
+
+        if (escadas.value === '6') {
+            escadas = '<b>Escadas:</b> Independência Modificada: Sobe e desce pelo menos um lance de escadas requerendo corrimão ou algum outro tipo de apoio. Leva um tempo acima do razoável ou há riscos de segurança.'
+
+        }
+
+        if (escadas.value === '7') {
+            escadas = '<b>Escadas:</b> Independência Completa: Sobe e desce pelo menos um lance de escadas sem corrimão ou apoio. Executa com segurança.'
+
+        }
+
+        if (escadas.value === '0') {
+            escadas = 'Dado ( <b class = "red">Escadas:</b> ) está em branco!'
+
+        }
+
+        if (compreensao.value === '1') { /*Compreensão*/
+            compreensao = '<b>Compreensão:</b> Assistência Total: Entende orientações e conversação sobre necessidades cotidiana básicas em menos de 25% do tempo de comunicação, ou não entende perguntas e afirmações simples ou, não responde de forma apropriada ou consistente.'
+
+        }
+
+        if (compreensao.value === '2') {
+            compreensao = '<b>Compreensão:</b> Facilitação Máxima: Entende orientações e conversação sobre necessidades cotidiana básicas entre 25 a 49% do tempo. Pode entender apenas perguntas ou afirmações simples. Requer facilitações em mais da metade do tempo de comunicação.'
+
+        }
+
+        if (compreensao.value === '3') {
+            compreensao = '<b>Compreensão:</b> Facilitação Moderada: Entende orientações e conversação sobre necessidades cotidiana básicas entre 50 a 74% do tempo de comunicação.'
+
+        }
+
+        if (compreensao.value === '4') {
+            compreensao = '<b>Compreensão:</b> Facilitação Mínima: Entende orientações e conversação sobre necessidades cotidiana básicas entre 75 a 90% do tempo. Requer facilitações entre 10 e 25% do tempo de comunicação.'
+
+        }
+
+        if (compreensao.value === '5') {
+            compreensao = '<b>Compreensão:</b> Facilitação Potencial: Entende orientações e conversação sobre necessidades cotidiana báscas em mais de 90% do tempo. Requer facilitações (falar mais lentamente, repetir, realçar palavras, frases e pausas, sugerir por gestos ou visualmente) em menos de 10% do tempo de comunicação.'
+
+        }
+
+        if (compreensao.value === '6') {
+            compreensao = '<b>Compreensão:</b> Independência Modificada: Entende instruções e conversação complexas ou abstratas na maior parte das vezes ou com pequena dificuldade. Não necessita de facilitações.'
+
+        }
+
+        if (compreensao.value === '7') {
+            compreensao = '<b>Compreensão:</b> Independência Completa: Entende instruções e conversação complexas ou abstratas; entende sua língua materna falada ou escrita. '
+
+        }
+
+        if (compreensao.value === '0') {
+            compreensao = 'Dado ( <b class = "red">Compreensão:</b> ) está em branco!'
+
+        }
+
+        if (expressao.value === '1') { /*Expressão*/
+            expressao = '<b>Expressão:</b> Assistência Total: Exprime ideias e necessidades cotidianas básicas em menos de 25% do tempo ou, apesar das facilitações, não exprime as necessidades básicas de forma apropriada ou consistente.'
+
+        }
+
+        if (expressao.value === '2') {
+            expressao = '<b>Expressão:</b> Facilitação Máxima: Exprime ideias e necessidades cotidianas básicas em 25 a 49% do tempo. Pode usar apenas gestos e palavras simples. Necessita de facilitações em mais da metade do tempo de expressão.'
+
+        }
+        if (expressao.value === '3') {
+            expressao = '<b>Expressão:</b> Facilitação Moderada:  Exprime ideias e necessidades cotidianas básicas em 50 a 75% do tempo. Requer facilitações entre 25 e 50% do tempo de expressão'
+
+        }
+
+        if (expressao.value === '4') {
+            expressao = '<b>Expressão:</b> Facilitação Mínima: Exprime ideias e necessidades cotidianas básicas em 75 a 90% do tempo.Requer facilitações entre 10 e 25% do tempo de expressão.'
+
+        }
+
+        if (expressao.value === '5') {
+            expressao = '<b>Expressão:</b>  Facilitação Potencial: Exprime ideias e necessidades cotidinas básicas em mais de 90% do tempo.Em menos de 10% do tempo requer facilitações (por exemplo, repetição frequente) para ser entendido.'
+
+        }
+
+        if (expressao.value === '6') {
+            expressao = '<b>Expressão:</b> Independência Modificada: Exprime ideias complexas ou abstratas na maior parte das ocasiões ou com pequena dificuldade. Não necessita das facilitações. Pode necessitar de um dispositivo de ampliação sonora ou de comunicação.'
+
+        }
+
+        if (expressao.value === '7') {
+            expressao = '<b>Expressão:</b> Independência Completa: Exprime ideias complexas ou abstratas com clareza e fluência.'
+
+        }
+
+        if (expressao.value === '0') {
+            expressao = 'Dado ( <b class = "red">Expressão:</b> ) está em branco!'
 
         }
 
 
+        if (interacao.value === '1') { /*Interalçao Social*/
+            interacao = '<b>Interação Social:</b> Assistência Total: Não interage adequadamente ou faz em menos de 25% do tempo. Necessita de restrições de contatos ou deslocamentos devido a comportamentos socialmente inadequados.'
 
+        }
+
+        if (interacao.value === '2') {
+            interacao = '<b>Interação Social:</b> Orientação Máxima: A pessoa interage adequadamente 25 a 49% do tempo. Pode necessitar de restrições de contatos ou deslocamentos devido a comportamentos socialmente inadequados.'
+
+        }
+
+        if (interacao.value === '3') {
+            interacao = '<b>Interação Social:</b> Orientação Moderada: A pessoa interage adequadamente 50 a 74% do tempo, ou seja, apresenta comportamento inadequado entre 25 e 50% do tempo, necessitando de orientação moderada.'
+
+        }
+
+        if (interacao.value === '4') {
+            interacao = '<b>Interação Social:</b> Orientação Mínima: A pessoa interage adequadamente 75 a 90% do tempo, ou seja, apresenta comportamento socialmente inadequado entre 10 e 25% do tempo, necessitando de orientação mínima.'
+
+        }
+
+        if (interacao.value === '5') {
+            interacao = '<b>Interação Social:</b> Supervisão: Requer supervisão (acompanhamento, controle verbal, sugestão, incentivo) apenas em situações incomuns ou sob tensão, mas não mais que 10% do tempo. Pode precisar de incentivo para começar a participar.'
+
+        }
+
+        if (interacao.value === '6') {
+            interacao = '<b>Interação Social:</b> Independência Modificada: Interage adequadamente com o pessoal do hospital, outros pacientes e familiares na maior parte das ocasiões e apenas perde o controle ocasionalmente. Não requer supervisão. Pode precisar de um tempo acima do razoável para se ajustar nas situações sociais ou pode necessitar de medicamento para controle.'
+
+        }
+
+        if (interacao.value === '7') {
+            interacao = '<b>Interação Social:</b> Independência Completa: Interage adequadamente com o pessoal do hospital, outros pacientes e familiares. Não precisa de medicamentos para se controlar.'
+
+        }
+
+        if (interacao.value === '0') {
+            interacao = 'Dado ( <b class = "red">Interação Social:</b> ) está em branco!'
+
+        }
+
+        if (resolucao.value === '1') { /*Resolução de Problemas*/
+            resolucao = '<b>Resolução de Problemas:</b> Orientação Total: A pessoa resolve problemas de rotina em menos de 25% do tempo. Necessitando de orientação quase todo o tempo ou não resolve efetivamente os problemas. Pode necessitar constantemente de orientação para completas, uma a uma, as atividades diárias.'
+
+        }
+        if (resolucao.value === '2') {
+            resolucao = '<b>Resolução de Problemas:</b> Orientação Máxima: A pessoa resolve problemas de rotina em 25 a 49% do tempo. Em mais da metade do tempo necessita de orientação para dar início, planejar ou concluir atividades diárias.'
+
+        }
+
+        if (resolucao.value === '3') {
+            resolucao = '<b>Resolução de Problemas:</b> Orientação Moderada: A pessoa resolve problemas de rotina em 50 a 74% do tempo.'
+
+        }
+
+        if (resolucao.value === '4') {
+            resolucao = '<b>Resolução de Problemas:</b> Orientação Mínima: A pessoa resolve problemas de rotina em 75 a 90% do tempo.'
+
+        }
+
+        if (resolucao.value === '5') {
+            resolucao = '<b>Resolução de Problemas:</b> Supervisão: Requer supervisão em até 10% das vezes para resolver problemas de rotina sob condições incomuns ou sob tensão'
+
+        }
+
+        if (resolucao.value === '6') {
+            resolucao = '<b>Resolução de Problemas:</b> Independência Modificada: Reconhece um problema, toma decisões apropriadas, na maioria das vezes dá início a uma sequência de etapas para resolver problemas complexos, ou com pequena dificuldade ou levando um tempo acima do razoável para tomar decisões sobre ou resolver problemas complexos.'
+
+        }
+
+        if (resolucao.value === '7') {
+            resolucao = '<b>Resolução de Problemas:</b> Independência Completa: Reconhece consistentemente um problema, toma decisões apropriadas, dá início a uma sequência de etapas para resolver problemas complexos até concluir o trabalho, aplicando correções quando comete erros.'
+
+        }
+
+        if (resolucao.value === '0') {
+            resolucao = 'Dado ( <b class = "red">Resolução de Problemas:</b> ) está em branco!'
+
+        }
+
+        if (memoria.value === '1') { /*Memória*/
+            memoria = '<b>Memória:</b> Assistência Total:  A pessoa não reconhece ou não se lembra ou o faz em menos de 25% do tempo.'
+
+        }
+
+        if (memoria.value === '2') {
+            memoria = '<b>Memória:</b> Facilitação Máxima: A pessoa reconhece em 25 a 49% do tempo. Necessita de ajuda em mais que a metade do tempo.'
+
+        }
+
+        if (memoria.value === '3') {
+            memoria = '<b>Memória:</b> Facilitação Moderada: A pessoa reconhece e lembra-se em 50 a 74% do tempo.'
+
+        }
+
+        if (memoria.value === '4') {
+            memoria = '<b>Memória:</b> Facilitação Mínima: A pessoa reconhece e lembra-se em 75 a 90% do tempo.'
+
+        }
+
+        if (memoria.value === '5') {
+            memoria = '<b>Memória:</b> Supervisão: Necessita de facilitações (sugestão, repetições, lembranças) apenas sob condições pouco habituais ou de tensão, porém não mais que em 10% do tempo.'
+
+        }
+
+        if (memoria.value === '6') {
+            memoria = '<b>Memória:</b> Independência Modificada: A pessoa parece ter apenas uma ligeira dificuldade em reconhecer as pessoas que encontra frequentemente, lembrando-se das rotinas diárias. Pode usar anotações, lembretes ou ajuda de sua iniciativa ou do ambiente.'
+
+        }
+
+        if (memoria.value === '7') {
+            memoria = '<b>Memória:</b> Independência Completa: Reconhece as pessoas que encontra com frequência e lembra-se das rotinas diárias; executa tarefas sem necessidade de repetição por outras pessoas.'
+
+        }
+
+        if (memoria.value === '0') {
+            memoria = 'Dado ( <b class = "red">Memória:</b> ) está em branco!'
+
+        }
 
 
 
@@ -601,9 +862,16 @@ function resultadoFinal() {
         ${transferenciaVaso}<br>
         ${transferenciaBanheira}<br>
         ${marchaCadeira}<br>
+        ${escadas}<br>
+        ${compreensao}<br>
+        ${expressao}<br>
+        ${interacao}<br>
+        ${resolucao}<br>
+        ${memoria}<br>
 
         
         </p>`
+
     }
 
 
@@ -621,8 +889,8 @@ function downloadpdf() { /* Salvando o texto em PDF*/
     let texto = document.querySelector('.texto-resultado');
     let janela = window.open('', '', 'width = 800, heigth = 600');
     janela.document.write(texto.innerHTML);
-    
-    
+
+
     if (nome.value !== '') {
         janela.document.title = nome.value;
     }
