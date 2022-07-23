@@ -16,8 +16,9 @@
 
 <body>
     <div class="container">
-        <h1 class="titulo"><img class = "imagem" src="imagem/Logo.svg" alt=""> </h1>
-
+        <div class="logoEcor">
+            <h1 class="titulo"><img class = "imagem" src="imagem/Logo.svg" alt=""> </h1>
+        </div>
         <div class="dadosPessoais">
             <div class="caixa-nome-idade">
                 <label class="lb-nome">Nome: </label><input class="input-nome" type="text" placeholder="Nome">
@@ -220,9 +221,9 @@
                         <option value="0"></option>
                         <option value="1">1 - Assistência Total</option>
                         <option value="2">2 - Assistência Máxima</option>
-                        <option value="3">3 - Assistência Moderada</option>
-                        <option value="4">4 - Assistência com Contato Mínimo</option>
-                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="3">3 - Facilitação Moderada</option>
+                        <option value="4">4 - Facilitação Mínima</option>
+                        <option value="5">5 - Facilitação Potencial</option>
                         <option value="6">6 - Independência Modificada</option>
                         <option value="7">7 - Independência Completa</option>
                     </select>
@@ -232,10 +233,10 @@
                     <select name="expressao" id="expressao">
                         <option value="0"></option>
                         <option value="1">1 - Assistência Total</option>
-                        <option value="2">2 - Assistência Máxima</option>
-                        <option value="3">3 - Assistência Moderada</option>
-                        <option value="4">4 - Assistência com Contato Mínimo</option>
-                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="2">2 - Facilitação Máxima</option>
+                        <option value="3">3 - Facilitação Moderada</option>
+                        <option value="4">4 - Facilitação Mínima</option>
+                        <option value="5">5 - Facilitação Potencial </option>
                         <option value="6">6 - Independência Modificada</option>
                         <option value="7">7 - Independência Completa</option>
                     </select>
@@ -248,10 +249,10 @@
                     <select name="interacao-social" id="interacao-social">
                         <option value="0"></option>
                         <option value="1">1 - Assistência Total</option>
-                        <option value="2">2 - Assistência Máxima</option>
-                        <option value="3">3 - Assistência Moderada</option>
-                        <option value="4">4 - Assistência com Contato Mínimo</option>
-                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="2">2 - Orientação Máxima</option>
+                        <option value="3">3 - Orientação Moderada</option>
+                        <option value="4">4 - Orientação Mínima</option>
+                        <option value="5">5 - Supervisão</option>
                         <option value="6">6 - Independência Modificada</option>
                         <option value="7">7 - Independência Completa</option>
                     </select>
@@ -259,11 +260,11 @@
                     <label><b>Resolução de problemas</b></label>
                     <select name="resolucao-de-problemas" id="resolucao-de-problemas">
                         <option value="0"></option>
-                        <option value="1">1 - Assistência Total</option>
-                        <option value="2">2 - Assistência Máxima</option>
-                        <option value="3">3 - Assistência Moderada</option>
-                        <option value="4">4 - Assistência com Contato Mínimo</option>
-                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="1">1 - Orientação Total</option>
+                        <option value="2">2 - Orientação Máxima</option>
+                        <option value="3">3 - Orientação Moderada</option>
+                        <option value="4">4 - Orientação Mínima</option>
+                        <option value="5">5 - Supervisão</option>
                         <option value="6">6 - Independência Modificada</option>
                         <option value="7">7 - Independência Completa</option>
                     </select>
@@ -272,10 +273,10 @@
                     <select name="memoria" id="memoria">
                         <option value="0"></option>
                         <option value="1">1 - Assistência Total</option>
-                        <option value="2">2 - Assistência Máxima</option>
-                        <option value="3">3 - Assistência Moderada</option>
-                        <option value="4">4 - Assistência com Contato Mínimo</option>
-                        <option value="5">5 - Supervisão ou Preparação</option>
+                        <option value="2">2 - Facilitação Máxima</option>
+                        <option value="3">3 - Facilitação Moderada</option>
+                        <option value="4">4 - Facilitação Mínima</option>
+                        <option value="5">5 - Supervisão</option>
                         <option value="6">6 - Independência Modificada</option>
                         <option value="7">7 - Independência Completa</option>
                     </select>
@@ -294,7 +295,7 @@
         <div class="botao-enviar">
             <button class="enviar" onclick="resultadoFinal()"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
             <button class="imprimir btn-config" onclick="downloadpdf()"><i class="fa-solid fa-file-pdf"></i> Salvar</button>
-            <button class="copiar btn-config" onclick="copiar()"><i class="fa-solid fa-copy"></i> copiar</button>
+            <button class="copiar btn-config" onclick="copiar()"><i class="fa-solid fa-copy"></i> Copiar</button>
             <button class="limpar btn-config" onclick="limpar()"><i class="fa-solid fa-trash-can"></i> Limpar</button>
         </div>
 
@@ -332,6 +333,7 @@
 
 
     <script src="scripts.js"></script>
+    <script src="mudarDeCor.js"></script>
 </body>
 
 </html>
