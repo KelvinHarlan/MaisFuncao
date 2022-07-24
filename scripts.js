@@ -944,11 +944,11 @@ function limpar() {
     texto.innerHTML = 'Aguardando resultado...' // quando limpar, redefinir o texto 
 
     if (window.innerWidth > 768) { /*Verificando tamanho da tela para aplicar o scroll*/
-        palavraCopiar.style.backgroundColor = 'transparent'; // voltar a cor do botão copiar Desktop
+        palavraCopiar.style.backgroundColor = 'rgb(255,255,255)'; // voltar a cor do botão copiar Desktop
     }
     else {
         palavraCopiar.style.backgroundColor = 'rgb(255,255,255';
-        caixaTexto.style.display = 'none' // ocultando a barra de resultados no mobile
+        caixaTexto.style.display = 'none';// ocultando a barra de resultados no mobile
     }
     palavraCopiar.innerHTML = '<i class="fa-solid fa-copy"></i> Copiar'; // caso o copiar tenha sido selecionado, volta ao normal
 
