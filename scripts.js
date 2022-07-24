@@ -676,7 +676,7 @@ function resultadoFinal() {
 
         }
 
-        else if (expressao.value === '1') { /*Expressão*/
+        if (expressao.value === '1') { /*Expressão*/
             expressao = '<b>Expressão:</b> Assistência Total - Exprime ideias e necessidades cotidianas básicas em menos de 25% do tempo ou, apesar das facilitações, não exprime as necessidades básicas de forma apropriada ou consistente.';
 
         }
@@ -795,7 +795,7 @@ function resultadoFinal() {
 
         }
 
-        else if (memoria.value === '1') { /*Memória*/
+        if (memoria.value === '1') { /*Memória*/
             memoria = '<b>Memória:</b> Assistência Total -  A pessoa não reconhece ou não se lembra ou o faz em menos de 25% do tempo.';
 
         }
@@ -834,7 +834,6 @@ function resultadoFinal() {
             memoria = 'Dado ( <b class = "red">Memória:</b> ) está em branco!';
 
         }
-
 
 
 
