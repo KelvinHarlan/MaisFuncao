@@ -19,6 +19,9 @@ function mudarDeCor() {
         corClara();
         logomarca.src = 'imagem/Logo.svg';
         }
+    else{
+        console.log('erro')
+    };
     
 
         function corPreta() { // inicio da cor preta
@@ -34,14 +37,14 @@ function mudarDeCor() {
                 for (i = 0; i < btnConfig.length; i++) {
                     btnConfig[i].style.backgroundColor = 'rgb(255,255,255)';
                 }
-            }
+            };
             mudarBotoes();
 
             function mudarIcones() {
                 for (i = 0; i < icon.length; i++) {
                     icon[i].style.color = 'rgb(255,255,255)';
-                }
-            }
+                };
+            };
             mudarIcones();
             btnIcon.className = 'fa-solid fa-sun';
             btnIcon.style.color = 'rgb(255, 255, 255)';
@@ -62,12 +65,12 @@ function mudarDeCor() {
             function mudarIcones() {
                 for (i = 0; i < icon.length; i++) {
                     icon[i].style.color = 'rgba(0, 0, 0, 0.700)';
-                }
-            }
+                };
+            };
             mudarIcones();
             btnIcon.className = 'fa-solid fa-moon';
             btnIcon.style.color = 'rgb(0, 0, 0)';
 
-        } // fim da cor clara
+        }; // fim da cor clara
 
-}
+};
