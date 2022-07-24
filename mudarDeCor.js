@@ -1,4 +1,5 @@
 var btnIcon = document.querySelector('.fa-moon');
+var logomarca = document.querySelector('.imagem');
 
 function mudarDeCor() {
     let planoDeFundo = document.querySelector('body');
@@ -11,10 +12,12 @@ function mudarDeCor() {
     
     if (btnIcon.className === 'fa-solid fa-moon'){
     corPreta();
+    logomarca.src = 'imagem/LogoBranca.svg';
     }
 
     else if (btnIcon.className === 'fa-solid fa-sun'){
         corClara();
+        logomarca.src = 'imagem/Logo.svg';
         }
     
 
