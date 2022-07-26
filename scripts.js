@@ -4,11 +4,12 @@ function stopDefAction(evt) { // removendo evento de atualizacao de pagina ao cl
 
 document.querySelector('html').addEventListener(// removendo evento de atualizacao de pagina ao clicar no enviar
     'click', stopDefAction, false);
-
+ 
 function resultadoFinal() {
     let nome = document.querySelector('.input-nome');
     let idade = document.querySelector('.input-idade').value;
     let sexo = document.querySelector('#sexo');
+    let local = document.querySelector('.input-local');
     let cadeirante = document.querySelector('#cadeirante').value;
     let ativarBotões = document.querySelectorAll('.btn-config');
     /*Autocuidado*/
@@ -848,6 +849,7 @@ function resultadoFinal() {
         <b>Nome: </b> ${nome.value}<br>
         <b>Idade: </b>${idade} anos<br>
         <b>Sexo: </b>${sexo.value}<br>
+        <b>Local: </b>${local.value}<br>
         <b>Cadeirante: </b>${cadeirante}<br><br>
         ${alimentacao}<br>
         ${higiene}<br>
